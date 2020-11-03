@@ -1,14 +1,12 @@
 // Creating class of User
 
 class User {
-    constructor(fname, lname, age, gender, location, interest, email, password, image){
+    constructor(fname, age, gender, city, interest, email, password){
 this.fname = fname;
-this.lname = lname;
 this.age = age;
 this.gender = gender;
-this.location = location;
+this.city = city;
 this.interest = interest;
 this.email = email;
 this.password = password;
-this.image = image;
 }}

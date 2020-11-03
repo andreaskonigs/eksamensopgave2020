@@ -1,0 +1,46 @@
+  * {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    margin-top: 1%;
+    margin-bottom: 0%;
+  }
+
+  /* Add padding to containers */
+  .container {
+    margin: auto;
+    width: 40%;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input {
+    width: 100%;
+    padding: 13px;
+    height: 1%;
+    margin: 5px 0 14px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
