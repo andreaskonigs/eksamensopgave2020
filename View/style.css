@@ -35,9 +35,31 @@ body {
     padding: 5px 10px;
     margin: 4px 0;
     border: none;
-    cursor: pointer;
     width: 100%;
     opacity: 0.9;
+  }
+
+  .loginbtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .logoutbtn {
+    background-color: dodgerblue;
+    color: white;
+    float: right;
+    padding: 5px 10px;
+    margin: 1% 2%;
+    border: none;
+  }
+
+  #msg {
+    visibility: hidden;
   }
   
   /* Add a blue text color to links */
