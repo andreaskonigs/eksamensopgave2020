@@ -50,7 +50,6 @@ body {
   }
 
   .logoutbtn {
-    background-color: dodgerblue;
     color: white;
     float: right;
     padding: 5px 10px;
@@ -58,11 +57,52 @@ body {
     border: none;
   }
 
-  #msg {
-    visibility: hidden;
+  .updatebtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .deletebtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    opacity: 0.9;
   }
   
   /* Add a blue text color to links */
   a {
     color: dodgerblue;
   }
+
+  .updateaccount {
+    float: left;
+    margin-left: 2%;
+  }
+
+  .potentialmatches {
+    margin-left: 10%;
+  }
+
+
+
+  .admintable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: small;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  

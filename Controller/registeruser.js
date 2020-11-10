@@ -15,17 +15,28 @@ const addUser = (ev)=>{
         email: document.getElementById('email').value,
         psw: document.getElementById('psw').value,
     }
-    users.push(user);
-    document.forms[0].reset(); // to clear the form for the next entries
-    //document.querySelector('form').reset();
 
-    //for display purposes only
     console.warn('added' , {user} );
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
+    
+    // to clear the form for the next entries: document.querySelector('form').reset();
+    users.push(user);
 
-    //saving to localStorage
-    localStorage.setItem('MyUsersList', JSON.stringify(users));
+    // Get the existing data
+    var existing = localStorage.getItem('MyUsersList');
+
+    if (existing) {
+        existing = JSON.parse(existing);
+
+        // Add new data to localStorage Array
+        existing.push(user);
+    } else {
+        existing = users
+    }
+
+    // Save back to localStorage
+    localStorage.setItem('MyUsersList', JSON.stringify(existing));
+    window.location.href = "homepage.html?user="+document.getElementById('email').value;
+
 }
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('registerbtn').addEventListener('click', addUser);
