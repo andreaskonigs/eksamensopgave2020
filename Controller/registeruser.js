@@ -18,7 +18,7 @@ const addUser = (ev)=>{
 
     console.warn('added' , {user} );
     
-    // to clear the form for the next entries: document.querySelector('form').reset();
+    // to clear the form for the next registers
     users.push(user);
 
     // Get the existing data
@@ -35,7 +35,9 @@ const addUser = (ev)=>{
 
     // Save back to localStorage
     localStorage.setItem('MyUsersList', JSON.stringify(existing));
-    window.location.href = "homepage.html?user="+document.getElementById('email').value;
+
+    // When clicked, enter loginpage to log in.
+    window.location.href = "login.html";
 
 }
 document.addEventListener('DOMContentLoaded', ()=>{

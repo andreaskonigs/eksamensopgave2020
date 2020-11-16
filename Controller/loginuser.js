@@ -12,13 +12,6 @@ function check() {
     // Entered data from the login-form
     var useremail = document.getElementById('email').value;
     var userpsw = document.getElementById('psw').value;
-    var adminemail = "admin@hotmail.com";
-    var adminnpsw = "admin123";
-
-    if (useremail == adminemail && userpsw == adminnpsw) {
-        window.location.href = "adminhomepage.html";
-        return
-        }
 
     // https://stackoverflow.com/questions/18238173/javascript-loop-through-json-array
     // For-loop that validates if users registered email and password match with entered email/password in Login.

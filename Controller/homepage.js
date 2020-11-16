@@ -86,7 +86,7 @@ function deleteuser() {
 }
 
 
-// EventListeners, button for update/delete/logout
+// EventListeners, button for update/delete
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('updatebtn').addEventListener('click', updateuser);
 });
