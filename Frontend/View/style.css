@@ -1,0 +1,134 @@
+  * {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    background-color: floralwhite;
+  }
+
+  /* Add a color and font-size to links */
+  a {
+    color: dodgerblue;
+    font-size: large;
+  }
+
+  /* Add style to containers */
+  .container {
+    margin: auto;
+    margin-top: 4%;
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 0 10px 5px white;
+  }
+  
+  .account {
+    float: left;
+    margin-left: 3.5%;
+    width: 22%;
+  }
+  
+  /* Full-width input fields */
+  input {
+    width: 100%;
+    padding: 13px;
+    height: 1%;
+    margin: 5px 0 14px 0;
+    border: seashell;
+    background: whitesmoke;
+    border-radius: 8px;
+  }
+  
+  img {
+    border-radius: 8px;
+    float: right;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    right: 16px;
+  }
+
+  .welcome {
+  float: right;
+  margin-right: 5%;
+  margin-top: -1%;
+  font-size: large;
+  width: 55%;
+  line-height: 1.5;
+  }
+  
+  /* Style for the buttons */
+  .registerbtn, .loginbtn, .updatebtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .logoutbtn {
+    float: right;
+    padding: 5px 10px;
+    margin: 1% 2%;
+    border: none;
+    border-radius: 8px;
+  }
+  .deletebtn {
+    background-color: tomato;
+    color: white;
+    padding: 10px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .potentialmatches {
+    float: right;
+    margin-right: 13%;
+    font-size: large;
+    width: 55%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+
+  .likedmatches {
+    float: right;
+    margin-right: 13%;
+    font-size: large;
+    width: 55%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  .like {
+    color: lawngreen;
+  }
+  .dislike {
+    color: red;
+  }
+  .removematchbutton {
+    background-color: tomato;
+    color: white;
+    padding: 10px 10px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }

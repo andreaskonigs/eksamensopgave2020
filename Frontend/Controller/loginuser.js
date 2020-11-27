@@ -32,7 +32,6 @@ function check() {
             alert("Email/Password is incorrect")
         }
     }
-    document.forms[0].reset();
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{

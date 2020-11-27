@@ -63,6 +63,10 @@ function updateuser() {
     localStorage.setItem('MyUsersList', JSON.stringify(UserList));
     window.location.href = "homepage.html?user=" + document.getElementById('email').value;
 }
+// When update-button is clicked, trigger function deleteuser.
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('deletebtn').addEventListener('click', deleteuser);
+});
 
 // Delete User
 function deleteuser() {
@@ -84,13 +88,34 @@ function deleteuser() {
     localStorage.setItem('MyUsersList', JSON.stringify(UserList));
     window.location.href = "login.html";
 }
-
-
-// EventListeners, button for update/delete
+// When delete-button is clicked, trigger function deleteuser.
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('updatebtn').addEventListener('click', updateuser);
 });
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('deletebtn').addEventListener('click', deleteuser);
-});
+
+// When loading homepage, data inputs from User is already loaded in form
+window.onload = function () {
+    var MyUsersList = localStorage.getItem('MyUsersList');
+
+    var UserList = JSON.parse(MyUsersList);
+
+    table = document.getElementById('matchtable');
+
+    var inner = ""
+
+    // Entered data from the login-form
+    for(var i = 0; i < UserList.length; i++) {
+        inner += "<tr>"
+        var obj = UserList[i];
+        inner += "<td>" + obj.fname + "</td>"
+        inner += "<td>" + obj.bday + "</td>"
+        inner += "<td>" + obj.age + "</td>"
+        inner += "<td>" + obj.gender + "</td>"
+        inner += "<td>" + obj.city + "</td>"
+        inner += "<td>" + obj.interest1 + "</td>"
+        inner += "<td>" + obj.interest2 + "</td>"
+        inner += "<td>" + obj.interest3 + "</td>"
+    }
+    table.innerHTML += inner
+};
