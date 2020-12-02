@@ -104,6 +104,12 @@ body {
     font-family: arial, sans-serif;
     border-collapse: collapse;
   }
+
+  .removematchbuttondiv {
+    float: right;
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
   
   .like {
     color: lawngreen;
