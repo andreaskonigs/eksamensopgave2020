@@ -1,7 +1,7 @@
 let users = [];
-// example {id:1592304983049, fname: 'Andreas Kønigsfeldt', age: 21}
-const addUser = (ev)=>{
-    ev.preventDefault();  //to stop the form submitting
+// Example: id:1592304983049, fname: 'Andreas Kønigsfeldt', age: 22
+const registerUser = (ev)=>{
+    ev.preventDefault();  // To stop the form submitting
     let user = {
         id: Date.now(),
         fname: document.getElementById('fname').value,
@@ -18,7 +18,7 @@ const addUser = (ev)=>{
 
     console.warn('added' , {user} );
     
-    // to clear the form for the next registers
+    // To clear the form for next potential registers
     users.push(user);
 
     // Get the existing data
@@ -27,7 +27,7 @@ const addUser = (ev)=>{
     if (existing) {
         existing = JSON.parse(existing);
 
-        // Add new data to localStorage Array
+        // Add new data to localStorage array
         existing.push(user);
     } else {
         existing = users
@@ -41,5 +41,5 @@ const addUser = (ev)=>{
 
 }
 document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('registerbtn').addEventListener('click', addUser);
+    document.getElementById('registerbtn').addEventListener('click', registerUser);
 });

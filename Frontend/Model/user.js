@@ -16,10 +16,8 @@ this.psw = psw;
 
 // Hardcode two Users
 
-var userone = new User('Andreas Kønigsfeldt', [28, 11, 1998], 21, 'male', 'Copenhagen', 'computer', 'sport', 'food', 'andreaskonigs@live.dk', '111111');
-var usertwo = new User('Kirstine Rasmussen', [01, 08, 1997], 23, 'female', 'Copenhagen', 'clothes', 'sport', 'food', 'kirstine@tksf.dk', '222222');
+var user1 = new User('Andreas Kønigsfeldt', [28, 11, 1998], 21, 'male', 'Copenhagen', 'computer', 'sport', 'food', 'andreaskonigs@live.dk', '111111');
+var user2 = new User('Kirstine Rasmussen', [01, 08, 1997], 23, 'female', 'Copenhagen', 'clothes', 'music', 'food', 'kirstine@tksf.dk', '222222');
 
-// export var userone = JSON.parse(MyUsersList);
-// export var usertwo = JSON.parse(MyUsersList);
-
-// console.log(userone, usertwo);
+exports.user1 = user1;
+exports.user2 = user2;

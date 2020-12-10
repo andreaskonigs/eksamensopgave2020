@@ -1,5 +1,5 @@
 
-// When loading homepage, data inputs from User is already loaded in form
+// Function that makes it possible to have multiple JavaScript windows.onload functions
 function addLoadEvent(func) { 
 	var oldonload = window.onload; 
 	if (typeof window.onload != 'function') { 
@@ -13,7 +13,8 @@ function addLoadEvent(func) {
 		} 
 	} 
 } 
- 
+
+// When loading homepage, data inputs from User is already loaded in form
 addLoadEvent(function() { 
     var MyUsersList = localStorage.getItem('MyUsersList');
 
@@ -41,6 +42,8 @@ addLoadEvent(function() {
 });
 
 // https://html-online.com/articles/get-url-parameters-javascript/
+// Function to get URL parameters with JavaScript - Example: doing so, the users email will 
+// apear - example: "http://127.0.0.1:5500/Frontend/View/homepage.html?user=andreaskonigs@live.dk"
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -49,7 +52,7 @@ function getUrlVars() {
     return vars;
 }
 
-// Update User input in different Id-values
+// Update users input in different id-values in LocalStorage
 function updateuser() {
 
     var MyUsersList = localStorage.getItem('MyUsersList');
@@ -101,7 +104,7 @@ function deleteuser() {
     }
 
     localStorage.setItem('MyUsersList', JSON.stringify(UserList));
-    window.location.href = "login.html";
+    window.location.href = "login.html"; // If user is deleted, redirect to loginpage 
 }
 // When delete-button is clicked, trigger function deleteuser.
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -110,7 +113,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 
-// When loading homepage, data inputs from User is already loaded in form
+// Function that makes it possible to have multiple JavaScript windows.onload functions
 function addLoadEvent(func) { 
 	var oldonload = window.onload; 
 	if (typeof window.onload != 'function') { 
@@ -125,6 +128,7 @@ function addLoadEvent(func) {
 	} 
 } 
 
+// Create innerHTML - import user-data from LocalStorage in order to display in HTML-table "matchtable"
 addLoadEvent(function() { 
     var MyUsersList = localStorage.getItem('MyUsersList');
 
@@ -138,7 +142,7 @@ addLoadEvent(function() {
     btn.appendChild(document.createTextNode("Like")); 
     btn.id = "likebtn";
     
-    // Entered data from the login-form
+    // Input user data in <td>
     for(var i = 1; i < UserList.length; i++) {
         inner += "<tr>"
         var obj = UserList[i];
@@ -154,12 +158,9 @@ addLoadEvent(function() {
         inner += "<td>" + '<button>Dislike</button>' + "</td></tr>"
     }
     table.innerHTML += inner
-
-
 });
 
-
-
+// Function that makes it possible to have multiple JavaScript windows.onload functions
 function addLoadEvent(func) { 
 	var oldonload = window.onload; 
 	if (typeof window.onload != 'function') { 
@@ -173,6 +174,7 @@ function addLoadEvent(func) {
 		} 
 	} 
 } 
+// Get element of likebutton - when clicked, copy userdata from HTML-table "matchtable" and input this data in HTML-table "listofmatches"
 addLoadEvent(function likeuser() { 
 var source = document.getElementById('matchtable');
 var destination = document.getElementById('listofmatches');
@@ -188,7 +190,7 @@ button.addEventListener("click",function likeuser(){
 });
 
 
-
+// Function that makes it possible to have multiple JavaScript windows.onload functions
 function addLoadEvent(func) { 
 	var oldonload = window.onload; 
 	if (typeof window.onload != 'function') { 
@@ -202,21 +204,11 @@ function addLoadEvent(func) {
 		} 
 	} 
 }
+// Get element of remove match button - when clicked, delete row and therefore the userdata has been deleted from "listofmatches"-table.
 addLoadEvent(function removematch() { 
-// var source = document.getElementById('listofmatches');
-// var destination = document.getElementById('matchtable');
-// var copy = source.cloneNode(true);
-// copy.setAttribute('id', 'matchtable');
-
 var button = document.getElementById("removematchbuttondiv");
 button.addEventListener("click",function removematch(){
     button.onclick = alert("You have removed your match") & document.getElementById('listofmatches').deleteRow(1);;
 },false);
 
 });
-
-
-
-// const { userone } = require("../Model/user");
-// const { usertwo } = require("../Model/user");
-// inner += "<tr>" + userone + "/<tr>"

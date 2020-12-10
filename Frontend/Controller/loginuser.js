@@ -1,28 +1,29 @@
 
-// Check if stored data from register-form is equal to entered data in the login-form
+// Function to verify if stored data from register form is equal to entered data in the login-form
 function check() {
 
-    // Stored data from the register-form
+    // Get stored data from the register form
     var MyUsersList = localStorage.getItem('MyUsersList');
 
+    // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
     var UserList = JSON.parse(MyUsersList);
 
     console.log(UserList);
 
-    // Entered data from the login-form
+    // Declare entered data from the login-form
     var useremail = document.getElementById('email').value;
     var userpsw = document.getElementById('psw').value;
 
-    // https://stackoverflow.com/questions/18238173/javascript-loop-through-json-array
-    // For-loop that validates if users registered email and password match with entered email/password in Login.
+    // For-loop through JSON array
     for(var i = 0; i < UserList.length; i++) {
         var obj = UserList[i];
     
         console.log(obj.email);
 
+        // Verifiy if users registered email and password match with entered email/password in login form input
         if(obj.email == useremail) {
             if(obj.psw == userpsw) {
-                window.location.href = "homepage.html?user="+useremail;
+                window.location.href = "homepage.html?user="+useremail; // If correct, redirect to Homepage
             } else {
                 alert("Email/Password is incorrect");
             }
